@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #121214;
+
+    --base-color: 194;
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+    
+    --text-color: #FFFFFF;
+
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-color);
+    min-height: 100vh;
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+.play svg path , .pause svg path, .sound-on svg path {
+    fill: var(--primary-color);
+}
+
+button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+main {
+    align-self: end;
+    justify-self: center;
+}
+
+#timer {
+    margin-bottom: 1.6rem;
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    display: flex;
+}
+
+#controls {
+    background: var(--bg-primary-light);
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    border-radius: 9999px;
+}
+
+footer {
+    padding: 0 4rem 3.2rem 0;
+    align-self: end;
+    justify-self: flex-end;
+}
